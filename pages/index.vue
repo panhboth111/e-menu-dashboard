@@ -39,17 +39,18 @@ export default {
         desc: "Manage customer orders",
       },
       {
-        title: "Categories",
-        to: "/categories",
-        icon: "mdi-credit-card-scan",
-        desc: "Manage food categories",
-      },
-      {
         title: "Menu",
         to: "/menu",
         icon: "mdi-food",
         desc: "Manage food menu",
       },
+      {
+        title: "Categories",
+        to: "/categories",
+        icon: "mdi-credit-card-scan",
+        desc: "Manage food categories",
+      },
+
       {
         title: "Users",
         to: "/users",

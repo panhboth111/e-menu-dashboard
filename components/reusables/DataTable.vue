@@ -12,7 +12,9 @@
             ></v-text-field>
           </v-col>
           <v-spacer></v-spacer>
-          <v-btn color="primary" dark>CREATE</v-btn>
+          <v-btn color="primary" dark nuxt link :to="`/${to}/create`"
+            >CREATE</v-btn
+          >
         </v-row>
         <v-data-table :headers="headers" :items="items">
           <template v-slot:item.actions="{ item }">

@@ -12,13 +12,13 @@
             ></v-text-field>
           </v-col>
           <v-spacer></v-spacer>
-          <v-btn color="primary" dark nuxt link :to="`/${to}/create`"
+          <v-btn color="primary" dark @click="handleNavigateCreate"
             >CREATE</v-btn
           >
         </v-row>
         <v-data-table :headers="headers" :items="items">
           <template v-slot:item.actions="{ item }">
-            <v-btn @click="handleNavigate(item)" icon
+            <v-btn @click="handleNavigateView(item)" icon
               ><v-icon size="20">mdi-eye</v-icon></v-btn
             >
           </template>
@@ -39,8 +39,11 @@ export default {
     to: String,
   },
   methods: {
-    handleNavigate(item) {
+    handleNavigateView(item) {
       this.$router.push(`/${this.to}/${item.id}`);
+    },
+    handleNavigateCreate() {
+      this.$router.push(`/${this.to}/create`);
     },
   },
 };
